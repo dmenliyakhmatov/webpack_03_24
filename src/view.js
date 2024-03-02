@@ -1,3 +1,4 @@
+import image from "./image.png";
 import todoImg from "./todo.png";
 
 export function renderTodoApp(model) {
@@ -25,6 +26,7 @@ export function renderTodoApp(model) {
       const todo = model.addTodo(todoText);
       renderTodoItem(todo);
       todoInput.value = "";
+      throw Error("Error");
     }
   });
 
@@ -49,4 +51,16 @@ export function renderTodoApp(model) {
 
     todoList.appendChild(todoItem);
   }
+
+  const img = document.createElement("img");
+  img.src = image;
+  appContainer.append(img);
 }
+
+const arr = [1, 3, 2];
+
+const splicedArr = [...arr].splice(0, 2, 190);
+
+console.log(arr);
+console.log(splicedArr);
+///comment

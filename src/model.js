@@ -21,8 +21,14 @@ export class TodoModel {
   toggleTodoCompleted(todoId) {
     this.todos = this.todos.map((todo) => {
       if (todo.id === todoId) {
+        const arr = [1, 2, 3, 4];
+
+        const newArr = [...arr];
+
         return {
           ...todo,
+
+          newArr,
           completed: !todo.completed,
         };
       }
